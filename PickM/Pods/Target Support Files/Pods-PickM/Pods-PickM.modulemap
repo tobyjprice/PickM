@@ -1,0 +1,6 @@
+framework module Pods_PickM {
+  umbrella header "Pods-PickM-umbrella.h"
+
+  export *
+  module * { export * }
+}
