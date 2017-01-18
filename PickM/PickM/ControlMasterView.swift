@@ -11,7 +11,7 @@ import UIKit
 class ControlMasterView: UIView {
     
     //var eventData = Event()
-    let dayCount = 6
+    let dayCount = eventDayCount
     let dayLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 25))
     var animationDur: Double = 0.2
     
@@ -59,8 +59,8 @@ class ControlMasterView: UIView {
         dayLabel.textAlignment = NSTextAlignment.center
         dayLabel.center = CGPoint(x: screenWidth / 2, y: viewHeight - CGFloat(30))
         dayLabel.textColor = UIColor.white
-        dayLabel.text = eventDat.days[0].name
-        print(eventDat.days[0].name)
+        //dayLabel.text = eventDat.stages[0].name
+        //print(eventDat.days[0].name!)
         
         self.addSubview(dayLabel)
         
@@ -93,7 +93,7 @@ class ControlMasterView: UIView {
         button.setTitleColor(customNav1, for: .normal)
         UIView.animate(withDuration: animationDur, delay: 0, options: .allowUserInteraction, animations: { button.backgroundColor = customTint }, completion: nil)
         
-        self.dayLabel.text = eventDat.days[Int((button.titleLabel?.text)!)! - 1].name
+        self.dayLabel.text = eventDat.sections[Int((button.titleLabel?.text)!)! - 1].name
         
         // Gets the parent view controller, in this case the MasterViewController
         var parentViewResponder: UIViewController? {

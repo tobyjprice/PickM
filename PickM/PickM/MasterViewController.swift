@@ -13,8 +13,7 @@ class MasterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let loadEvent = eventLoad()
-        eventDat = loadEvent.eventLayout()
+        let eventDat = Event()
         
         let nav = self.navigationController?.navigationBar
         nav?.isTranslucent = false

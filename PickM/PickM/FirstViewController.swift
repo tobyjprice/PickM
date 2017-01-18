@@ -15,13 +15,16 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // send the page index to FirstViewCOntroller
     var pageIndex: Int?
-    var eventData = Event()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        eventDat.load()
+        
         self.automaticallyAdjustsScrollViewInsets = false
+        self.matchTable.rowHeight = UITableViewAutomaticDimension
+        self.matchTable.estimatedRowHeight = 185
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,28 +37,62 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+  
+   
     
     func tableView(_ matchTable: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count = 0
-        for match in eventData.days[pageIndex!].matches {
-            if match.id != nil {
-                count += 1
-            }
+        if pageIndex! == 0
+        {
+            return 3
         }
-        return count
+        else
+        {
+            return eventDat.sections[pageIndex!].groups.count
+        }
     }
     
     func tableView(_ matchTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = matchTable.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchTableCell
-        
-        // Set selection colour
-        let cView = UIView()
-        cView.backgroundColor = customTint
-        cell.selectedBackgroundView = cView
-        cell.matchCell1.text = eventData.days[pageIndex!].matches[indexPath.row].name
-        cell.tag = indexPath.row
-        
-        return cell
+        if pageIndex! == 0
+        {
+            if indexPath.row == 2
+            {
+                let cell = matchTable.dequeueReusableCell(withIdentifier: "groupStageCell", for: indexPath) as! GroupStageCell
+                
+                // Set selection colour
+                let cView = UIView()
+                cView.backgroundColor = customTint
+                cell.selectedBackgroundView = cView
+                //cell.matchCell1.text = eventData.stages[pageIndex!].matches[indexPath.row].name
+                cell.tag = indexPath.row
+                
+                return cell
+            } else
+            {
+                let cell = matchTable.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchTableCell
+                
+                // Set selection colour
+                let cView = UIView()
+                cView.backgroundColor = customTint
+                cell.selectedBackgroundView = cView
+                //cell.matchCell1.text = eventData.stages[pageIndex!].matches[indexPath.row].name
+                cell.tag = indexPath.row
+                
+                return cell
+            }
+        }
+        else
+        {
+            let cell = matchTable.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchTableCell
+            
+            // Set selection colour
+            let cView = UIView()
+            cView.backgroundColor = customTint
+            cell.selectedBackgroundView = cView
+            cell.matchCell1.text = eventDat.sections[pageIndex!].groups[indexPath.row].name
+            cell.tag = indexPath.row
+            
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

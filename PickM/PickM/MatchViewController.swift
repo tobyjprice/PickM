@@ -68,9 +68,6 @@ class MatchViewController: UIViewController, UITableViewDataSource, UITableViewD
         teamPickButton2.layer.cornerRadius = 5
         teamPickButton2.layer.borderWidth = 1
         teamPickButton2.layer.borderColor = customTint.cgColor
-        
-        print(day)
-        print(match)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,7 +95,7 @@ class MatchViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cView = UIView()
         cView.backgroundColor = customTint
         cell.selectedBackgroundView = cView
-        cell.playerNameLabel.text = eventDat.days[day!].matches[match!].teams[0].name
+        cell.playerNameLabel.text = eventDat.sections[day!].groups[match!].teams[0].name
         cell.tag = indexPath.row
         
         return cell

@@ -10,7 +10,7 @@ import UIKit
 
 class ManagePageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
-    let dayCount = 6
+    let dayCount = eventDayCount //eventDat.stages.count
     
     var currentIndex: Int = 0
     var pendingIndex: Int?
@@ -25,7 +25,13 @@ class ManagePageViewController: UIPageViewController, UIPageViewControllerDataSo
         self.dataSource = self
         self.delegate = self
         
-        let page1: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "PageContentController")
+        for _ in 1...dayCount
+        {
+            let tempPage: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "PageContentController")
+            self.pages.append(tempPage)
+        }
+        
+        /*let page1: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "PageContentController")
         let page2: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "PageContentController")
         let page3: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "PageContentController")
         let page4: UIViewController! = storyboard?.instantiateViewController(withIdentifier: "PageContentController")
@@ -37,19 +43,19 @@ class ManagePageViewController: UIPageViewController, UIPageViewControllerDataSo
         pages.append(page3)
         pages.append(page4)
         pages.append(page5)
-        pages.append(page6)
+        pages.append(page6)*/
         
         let tempPage = pages[0] as! FirstViewController
-        tempPage.eventData = eventDat
+        //tempPage.eventData = eventDat
         tempPage.pageIndex = 0
         
-        setViewControllers([page1], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
+        setViewControllers([pages[0]], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
     }
     
     func setCustomView(viewIndex: Int) {
         if allowSwipe {
             let nextPage = pages[viewIndex] as! FirstViewController
-            nextPage.eventData = eventDat
+            //nextPage.eventData = eventDat
             nextPage.pageIndex = viewIndex
             
             if viewIndex > currentIndex {
@@ -69,7 +75,7 @@ class ManagePageViewController: UIPageViewController, UIPageViewControllerDataSo
             let previousIndex = currentIndex - 1
             if previousIndex >= 0 {
                 let nextPage = pages[previousIndex] as! FirstViewController
-                nextPage.eventData = eventDat
+                //nextPage.eventData = eventDat
                 nextPage.pageIndex = previousIndex
                 return pages[previousIndex]
             }
@@ -84,7 +90,7 @@ class ManagePageViewController: UIPageViewController, UIPageViewControllerDataSo
             let nextIndex = currentIndex + 1
             if nextIndex < pages.count {
                 let nextPage = pages[nextIndex] as! FirstViewController
-                nextPage.eventData = eventDat
+                //nextPage.eventData = eventDat
                 nextPage.pageIndex = nextIndex
                 return pages[nextIndex]
             }

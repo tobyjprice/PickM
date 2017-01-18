@@ -12,8 +12,9 @@ import UIKit
 // Used to customise various aspects of the app UI such as core colours and UI Sizes/Styles
 
 // Event Details
-let eventName = "ESL One Cologne 2016"
-let eventNumber = 10
+let eventName = "ELEAGUE Atlanta 2017"
+let eventNumber = 11
+let eventDayCount = 4
 
 // Custom colour set for the entire app
 // Default yellow tint
