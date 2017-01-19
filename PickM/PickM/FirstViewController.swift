@@ -21,6 +21,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         // Do any additional setup after loading the view, typically from a nib.
         
         eventDat.load()
+        playerDat.load()
         
         self.automaticallyAdjustsScrollViewInsets = false
         self.matchTable.rowHeight = UITableViewAutomaticDimension
@@ -66,7 +67,8 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
                 cell.tag = indexPath.row
                 
                 return cell
-            } else
+            }
+            else
             {
                 let cell = matchTable.dequeueReusableCell(withIdentifier: "matchCell", for: indexPath) as! MatchTableCell
                 
@@ -74,8 +76,20 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
                 let cView = UIView()
                 cView.backgroundColor = customTint
                 cell.selectedBackgroundView = cView
-                //cell.matchCell1.text = eventData.stages[pageIndex!].matches[indexPath.row].name
-                cell.tag = indexPath.row
+                cell.cellScore.baselineAdjustment = .alignCenters
+                if indexPath.row == 0
+                {
+                    cell.cellScore.text = "3-0"
+                    cell.cellScore.textColor = customGreen
+                    cell.cellTitle.text = "Pick a team that will advance undefeated"
+                }
+                else if indexPath.row == 1
+                {
+                    cell.cellScore.text = "0-3"
+                    cell.cellScore.textColor = customRed
+                    cell.cellTitle.text = "Pick a team that will be eliminated without winning a match"
+                }
+                
                 
                 return cell
             }
@@ -88,7 +102,6 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
             let cView = UIView()
             cView.backgroundColor = customTint
             cell.selectedBackgroundView = cView
-            cell.matchCell1.text = eventDat.sections[pageIndex!].groups[indexPath.row].name
             cell.tag = indexPath.row
             
             return cell
@@ -102,7 +115,7 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Gets the target view controller (MatchViewController) and sets the vars day and match to their values
-        let targetVC = segue.destination as? MatchViewController
+        let targetVC = segue.destination as? TeamSelectViewController
         let senderCell = sender as? MatchTableCell
         
         targetVC?.day = pageIndex!

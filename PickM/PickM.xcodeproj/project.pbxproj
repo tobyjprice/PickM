@@ -10,6 +10,7 @@
 		1E113C701D9C88E6006DE268 /* CustomNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E113C6F1D9C88E6006DE268 /* CustomNavViewController.swift */; };
 		1E251AB81E2EC60800D2918E /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E251AB71E2EC60800D2918E /* Event.swift */; };
 		1E2802AF1D8E28E50070C4B1 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E2802AE1D8E28E50070C4B1 /* SwiftyJSON.framework */; };
+		1E4675B11E2FE45F0099C222 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4675B01E2FE45F0099C222 /* Player.swift */; };
 		1E4F7F981D2E993C001C19FA /* EventOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4F7F971D2E993C001C19FA /* EventOLD.swift */; };
 		1E71D1881D91FBE60000DF8B /* ManagePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71D1871D91FBE60000DF8B /* ManagePageViewController.swift */; };
 		1E71D18C1D9482350000DF8B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E71D18B1D9482350000DF8B /* MasterViewController.swift */; };
@@ -24,7 +25,7 @@
 		1ED3DEB21D2E7A7300808818 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ED3DEB11D2E7A7300808818 /* Assets.xcassets */; };
 		1ED3DEB51D2E7A7300808818 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ED3DEB31D2E7A7300808818 /* LaunchScreen.storyboard */; };
 		1EF44BC31E29081000DCFF8B /* GroupStageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF44BC21E29081000DCFF8B /* GroupStageCell.swift */; };
-		1EFBD1951D9987A600EEDDE6 /* MatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBD1941D9987A600EEDDE6 /* MatchViewController.swift */; };
+		1EFBD1951D9987A600EEDDE6 /* TeamSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFBD1941D9987A600EEDDE6 /* TeamSelectViewController.swift */; };
 		C102BC2C8894668FA2D92159 /* Pods_PickM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54DAAD290C2AF9880B8A9E39 /* Pods_PickM.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		1E113C6F1D9C88E6006DE268 /* CustomNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavViewController.swift; sourceTree = "<group>"; };
 		1E251AB71E2EC60800D2918E /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		1E2802AE1D8E28E50070C4B1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/PickM-gybactodwcybredkupsealaanthv/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		1E4675B01E2FE45F0099C222 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		1E4F7F971D2E993C001C19FA /* EventOLD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventOLD.swift; sourceTree = "<group>"; };
 		1E71D1871D91FBE60000DF8B /* ManagePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePageViewController.swift; sourceTree = "<group>"; };
 		1E71D18B1D9482350000DF8B /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +51,7 @@
 		1ED3DEB41D2E7A7300808818 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1ED3DEB61D2E7A7300808818 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1EF44BC21E29081000DCFF8B /* GroupStageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupStageCell.swift; sourceTree = "<group>"; };
-		1EFBD1941D9987A600EEDDE6 /* MatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchViewController.swift; sourceTree = "<group>"; };
+		1EFBD1941D9987A600EEDDE6 /* TeamSelectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamSelectViewController.swift; sourceTree = "<group>"; };
 		54DAAD290C2AF9880B8A9E39 /* Pods_PickM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PickM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF351BFCD37F9EE4BA27635 /* Pods-PickM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PickM/Pods-PickM.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,7 +100,7 @@
 				1ED3DEAA1D2E7A7300808818 /* FirstViewController.swift */,
 				1E8186171D5CD78B00EB44D6 /* MatchTableCell.swift */,
 				1EF44BC21E29081000DCFF8B /* GroupStageCell.swift */,
-				1EFBD1941D9987A600EEDDE6 /* MatchViewController.swift */,
+				1EFBD1941D9987A600EEDDE6 /* TeamSelectViewController.swift */,
 				1E82F1F91D9FDC3C00016AF0 /* PlayerTableCell.swift */,
 			);
 			name = "Match List View";
@@ -135,6 +137,7 @@
 				1EBF16D81D9964B300451195 /* CustomPrefs.swift */,
 				1E4F7F971D2E993C001C19FA /* EventOLD.swift */,
 				1E251AB71E2EC60800D2918E /* Event.swift */,
+				1E4675B01E2FE45F0099C222 /* Player.swift */,
 				1ED3DEB11D2E7A7300808818 /* Assets.xcassets */,
 				1ED3DEB31D2E7A7300808818 /* LaunchScreen.storyboard */,
 				1ED3DEB61D2E7A7300808818 /* Info.plist */,
@@ -281,7 +284,8 @@
 				1E71D18C1D9482350000DF8B /* MasterViewController.swift in Sources */,
 				1E4F7F981D2E993C001C19FA /* EventOLD.swift in Sources */,
 				1E8186181D5CD78B00EB44D6 /* MatchTableCell.swift in Sources */,
-				1EFBD1951D9987A600EEDDE6 /* MatchViewController.swift in Sources */,
+				1E4675B11E2FE45F0099C222 /* Player.swift in Sources */,
+				1EFBD1951D9987A600EEDDE6 /* TeamSelectViewController.swift in Sources */,
 				1E82F1FA1D9FDC3C00016AF0 /* PlayerTableCell.swift in Sources */,
 				1E113C701D9C88E6006DE268 /* CustomNavViewController.swift in Sources */,
 				1ED3DEA91D2E7A7300808818 /* AppDelegate.swift in Sources */,
